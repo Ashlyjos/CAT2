@@ -25,7 +25,7 @@ xmlhttp = new XMLHttpRequest();
 xmlhttp.open("GET", "details.xml", false);
 xmlhttp.send();
 xmlDoc = xmlhttp.responseXML; 
-x = xmlDoc.getElementsByTagName("art");
+x = xmlDoc.getElementsByTagName("CS");
 table="<tr><th>STU_NAME</th><th>STU_BRANCH</th></tr>";
 for (i = 0; i <x.length; i++) { 
   table += "<tr onclick='displaydetails(" + i + ")'><td>";
