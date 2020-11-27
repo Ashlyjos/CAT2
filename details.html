@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<style>
+h1,p{
+  text-align:center; 
+}
+table,th,td {
+  border : 2px solid black;
+   margin-left: auto;
+  margin-right: auto;
+}
+th,td {
+  padding: 9px;
+}
+</style>
+<body>
+<h1>Welcome</h1>
+<p>Click on name to get details of students</p>
+<p id='showtrc'></p>
+<table id="demo"></table>
+
+<script>
+var x,xmlhttp,xmlDoc
+xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "details.xml", false);
+xmlhttp.send();
+xmlDoc = xmlhttp.responseXML; 
+x = xmlDoc.getElementsByTagName("art");
+table="<tr><th>STU_NAME</th><th>STU_BRANCH</th></tr>";
+for (i = 0; i <x.length; i++) { 
+  table += "<tr onclick='displaydetails(" + i + ")'><td>";
+  table += x[i].getElementsByTagName("STU_NAME")[0].childNodes[0].nodeValue;
+  table += "</td><td>";
+  table +=  x[i].getElementsByTagName("STU_BRANCH")[0].childNodes[0].nodeValue;
+  table += "</td></tr>";
+}
+document.getElementById("demo").innerHTML = table;
+
+function displaydetails(i) {
+  document.getElementById("showtrc").innerHTML =
+  "CS: " +
+  x[i].getElementsByTagName("STU_NAME")[0].childNodes[0].nodeValue +
+  "<br>STU_BRANCH: " +
+  x[i].getElementsByTagName("STU_BRANCH")[0].childNodes[0].nodeValue +
+  "<br>STU_COLLEGE: " + 
+  x[i].getElementsByTagName("STU_COLLEGE")[0].childNodes[0].nodeValue +
+  "<br>STU_EMAIL: " +
+  x[i].getElementsByTagName("STU_EMAIL")[0].childNodes[0].nodeValue;
+}
+
+    </script>
+
+</body>
+</html>

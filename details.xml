@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CHRIST>
+<CS mid="M1">
+<STU_NAME>Amy Thomas</STU_NAME>
+<STU_BRANCH>Science</STU_BRANCH>
+<STU_COLLEGE>SJFC,Mangalore</STU_COLLEGE>
+<STU_EMAIL>amy.thomas@s.sjfc.in</STU_EMAIL>
+</CS>
+<CS mid="M2">
+<STU_NAME>Vinay Mohan</STU_NAME>
+<STU_BRANCH>CS</STU_BRANCH>
+<STU_COLLEGE>Kristu Jyothi,Bangalore</STU_COLLEGE>
+<STU_EMAIL>vinay.mohan@cs.kjb.in</STU_EMAIL>
+</CS>
+<CS mid="M3">
+<STU_NAME>Priya Raj</STU_NAME>
+<STU_BRANCH>CS</STU_BRANCH>
+<STU_COLLEGE>Kristu Jyothi,Bangalore</STU_COLLEGE>
+<STU_EMAIL>priya.raj@cs.kjb.in</STU_EMAIL>
+</CS>
+</CHRIST>
